@@ -8,6 +8,12 @@ body {
     background-color: #f0f0f0; /* Optional: adds a light gray background to the page */
 }
 
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 h1{
     font-family: "Monaco";
     margin-bottom: 25px;

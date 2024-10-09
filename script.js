@@ -1,5 +1,5 @@
 const container = document.querySelector("#container");
-
+let colors = ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red']
 
 //Loop to create 16x16 grid of divs
 for(let i=0; i < 16; i++){
@@ -12,11 +12,20 @@ for(let i=0; i < 16; i++){
 
 let grid_items = document.querySelectorAll(".grid-item");
 
+function generateRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
 
+let count = 1
 for(let i = 0; i < grid_items.length; i++){
     grid_items[i].addEventListener("mouseover", () =>{
-        grid_items[i].style.backgroundColor = "#0092ca";
+        rand = generateRandomNumber(0,6);
+        grid_items[i].style.backgroundColor = colors[rand];
+        let multiplier = 0.01;
+        let opacity = (multiplier * count);
+        count += 1;
+        grid_items[i].style.opacity = opacity;
     });
 }
 
@@ -39,10 +48,15 @@ button.addEventListener("click", () => {
     grid_items = document.querySelectorAll(".grid-item");
 
 
-
+    count  = 1 
     for(let i = 0; i < grid_items.length; i++){
     grid_items[i].addEventListener("mouseover", () =>{
-        grid_items[i].style.backgroundColor = "#0092ca";
+        rand = generateRandomNumber(0,6);
+        grid_items[i].style.backgroundColor = colors[rand];
+        let multiplier = 0.01;
+        let opacity = (multiplier * count);
+        count += 1;
+        grid_items[i].style.opacity = opacity;
     });
 }
 
