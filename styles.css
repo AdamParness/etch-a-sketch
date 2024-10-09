@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional: adds a light gray background to the page */
+}
+
+h1{
+    font-family: "Monaco";
+    margin-bottom: 25px;
+}
+
+button {
+    margin-bottom: 25px;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px; /* Adjust this value to change the overall size of the grid */
+    height: 480px; /* Make it square */
+    background-color: white; /* Optional: ensures the grid has a white background */
+}
+
+.grid-item {
+    flex-basis: calc(100% / 16); /* This creates 16 columns */
+    height: 0;
+    padding-bottom: calc(100% / 16); /* This makes each item square */
+    box-sizing: border-box;
+    border: 1px solid black;  /*Optional: adds a border to each grid item */
+    outline: 1px solid black;
+}
+
+.custom-grid-item {
+    flex-basis: calc(100% / 16); /* This creates 16 columns */
+    height: 0;
+    padding-bottom: calc(100% / 16); /* This makes each item square */
+    box-sizing: border-box;
+    border: 1px solid black;  /*Optional: adds a border to each grid item */
+    outline: 1px solid black;
+}
